@@ -137,10 +137,10 @@ footer p {
 
 .banner {
     width: 100%;
-    height: 65vh;
+    height: 74vh;
     background-image: url(../banners/banner1.png);
     background-size: cover;
-    margin-top: 100px;
+    margin-top: 50px;
     position: absolute;
 }
 
@@ -170,7 +170,7 @@ footer p {
 
 .banner-text button{
     /*margin-top: 50px;*/
-    margin: 50px 150px;
+    margin: 100px 150px;
     width: 25vh;
     height: 5vh;
     color: #343434;
@@ -184,5 +184,11 @@ footer p {
     transition: all 0.3s ease 0s;
     color: #C2C0A6;
     background: transparent;
+    border: #C2C0A6 1px solid;
+}
+
+.banner-text button:checked {
+    transition: all 0.3s ease 0s;
+    color: #C2C0A6;
     border: #C2C0A6 1px solid;
 }
