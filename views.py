@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def base():
-    return render_template('base.html')
+    return render_template('index.html')
 
 @app.route('/store')
 def store():

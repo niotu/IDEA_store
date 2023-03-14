@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Raleway:wght@100&display=swap');
 
 * {
     box-sizing: border-box;
@@ -44,7 +44,7 @@ li a:hover {
     color: #FFFBC5;
 }
 
-button {
+header button {
     transition: all 0.3s ease 0s;
     color: #343434;
     padding: 9px;
@@ -54,7 +54,7 @@ button {
     cursor: pointer;
 }
 
-button:hover{
+header button:hover{
     transition: all 0.3s ease 0s;
     background-color: #FFFBC5   ;
     border-radius: 10px;
@@ -126,4 +126,63 @@ footer p {
     padding: 60px 0;
     color: #C2C0A6;
     font-size: 18px;
+}
+
+/*------------------------------------------===========-===-===========-----------------------------------------*/
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.banner {
+    width: 100%;
+    height: 65vh;
+    background-image: url(../banners/banner1.png);
+    background-size: cover;
+    margin-top: 100px;
+    position: absolute;
+}
+
+.banner-text {
+    padding-top: 100px;
+    padding-left: 60%;
+}
+
+.banner-text h1{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    color: #C2C0A6;
+}
+.banner-text img {
+    padding-bottom: 50px;
+    padding-left: 100px;
+}
+
+.banner-text h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #C2C0A6;
+}
+
+.banner-text button{
+    /*margin-top: 50px;*/
+    margin: 50px 150px;
+    width: 25vh;
+    height: 5vh;
+    color: #343434;
+    font-weight: 500;
+    background-color: #C2C0A6;
+    border: transparent;
+    transition: all 0.3s ease 0s;
+}
+
+.banner-text button:hover{
+    transition: all 0.3s ease 0s;
+    color: #C2C0A6;
+    background: transparent;
+    border: #C2C0A6 1px solid;
 }
