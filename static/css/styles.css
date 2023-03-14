@@ -16,7 +16,7 @@ li, a, button {
 
 header {
     display: flex;
-    background-color: #53736A;
+    background-color: #343434;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
@@ -35,28 +35,95 @@ header {
     padding: 0px 40px;
 }
 
-.nav_links li a {
+li a {
     transition: all 0.3s ease 0s;
 }
 
-.nav_links li a:hover {
+li a:hover {
     transition: all 0.3s ease 0s;
     color: #FFFBC5;
 }
 
 button {
     transition: all 0.3s ease 0s;
-    color: #53736A;
+    color: #343434;
     padding: 9px;
     background-color: rgba(194, 192, 166, 1);
     border-radius: 15px;
     border: transparent;
+    cursor: pointer;
 }
 
 button:hover{
     transition: all 0.3s ease 0s;
-    padding: 9px;
     background-color: #FFFBC5   ;
-    border-radius: 12px;
-    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/*------------------------------------------===========-===-===========-----------------------------------------*/
+
+footer {
+    background-color: #343434;
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 20%;
+    padding: 0 15px;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 15%;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-col h4 {
+    margin-bottom: 18px;
+    text-transform: capitalize;
+    color: #C2C0A6;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: #FFFBC5;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li a{
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    padding-left: 8px;
+}
+
+.company-info {
+    align-content: end;
+    width: 30%;
+    margin: 0 19% 0 -12%;
+    padding: 10px 50px;
+}
+
+footer p {
+    padding: 60px 0;
+    color: #C2C0A6;
+    font-size: 18px;
 }
