@@ -23,9 +23,9 @@
             {% for item, image, cost in products %}
                 <li class="product-wrapper">
                     <div class="product-card">
-                        <img src={{ image }} alt='image'>
+                        <img src={{ image }} alt='image' width=300 height=300>
                         <a href="" class="product">{{ item }}</a>
-                        <h4>{{ cost }}</h4>
+                        <h4>{{ cost }} $ </h4>
                     </div>
                 </li>
             {% endfor %}
