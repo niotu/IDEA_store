@@ -60,9 +60,9 @@ header button {
     cursor: pointer;
 }
 
-header button:hover{
+header button:hover {
     transition: all 0.3s ease 0s;
-    background-color: #FFFBC5   ;
+    background-color: #FFFBC5;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -75,9 +75,11 @@ header button:hover{
     flex-direction: column;
     height: 100%;
 }
+
 .content {
     flex: 1 0 auto;
 }
+
 footer {
     flex: 0 0 auto;
     background-color: #1E1E1E;
@@ -94,7 +96,7 @@ footer {
     flex-wrap: wrap;
 }
 
-.container{
+.container {
     max-width: 1170px;
     margin: 0 15%;
 }
@@ -121,12 +123,12 @@ ul {
     width: 50px;
 }
 
-.footer-col ul li a{
+.footer-col ul li a {
     display: block;
     transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover{
+.footer-col ul li a:hover {
     padding-left: 8px;
 }
 
@@ -174,7 +176,7 @@ footer p {
     position: relative;
 }
 
-.banner-text h1{
+.banner-text h1 {
     font-family: 'Raleway';
     /*width: 80%;*/
     font-style: normal;
@@ -183,7 +185,7 @@ footer p {
     color: #C2C0A6;
 }
 
-.banner-text button{
+.banner-text button {
     /*margin-top: 50px;*/
     margin: 100px 0;
     width: 25vh;
@@ -195,7 +197,7 @@ footer p {
     transition: all 0.3s ease 0s;
 }
 
-.banner-text button:hover{
+.banner-text button:hover {
     transition: all 0.3s ease 0s;
     color: #C2C0A6;
     background: transparent;
@@ -250,6 +252,14 @@ footer p {
 
 .products {
     list-style: none;
-    margin: 0 -20px 0 0;
-    padding: 10% 15%;
+    /*margin: 0 0 0 0;*/
+    padding: 20px 15%;
+}
+
+.hot-products h2 {
+    padding-left: 15%;
+    padding-top: 12%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
 }
