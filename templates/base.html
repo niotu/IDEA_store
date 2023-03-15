@@ -7,61 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../static/images/IDlogo.png">
     <link rel="stylesheet" href="../static/css/styles.css">
+    <script defer src="../static/scripts/slider.js"></script>
 </head>
 <body>
-<header id="header">
-    <img class="logo" src="../static/images/logo.png" alt="logo">
-    <nav>
-        <ul class="nav_links">
-            <li><a href="/store">Store</a></li>
-            <li><a href="https://www.ikea.com">Inspiraion</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
-    <a class="cta" href="#">
-        <button>Services</button>
-    </a>
-</header>
-{% block content %}{% endblock %}
-<footer id="footer">
-    <div class="container">
-        <div class="footer-row">
-            <div class="company-info">
-                <img src="../static/images/logo.png" alt="logo">
-                <ul>
-                    <p>It happens that in a strange, completely unfamiliar house you begin to feel comfortable.</p>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Help</h4>
-                <ul>
-                    <li><a href="#">Customers support</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Product recalls</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>About</h4>
-                <ul>
-                    <li><a href="#">Our team</a></li>
-                    <li><a href="#">Developers</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">Official retailers</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                    <a href="#"><i class="fab fa-vk"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
+<div class="wrapper">
+    <header id="header">
+        <img class="logo" src="../static/images/logo.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/store">Store</a></li>
+                <li><a href="https://www.ikea.com">Inspiraion</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#">
+            <button>Services</button>
+        </a>
+    </header>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="company-info">
+                    <img src="../static/images/logo.png" alt="logo">
+                    <ul>
+                        <p>It happens that in a strange, completely unfamiliar house you begin to feel comfortable.</p>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Customers support</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Product recalls</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our team</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Official retailers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>
 </body>
 </html>
