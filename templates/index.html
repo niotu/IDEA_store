@@ -16,10 +16,15 @@
             </div>
         </div>
     </div>
+
+    <section id="section07" class="demo">
+        <a href="#hot"><span></span><span></span><span></span></a>
+    </section>
+
     <div class="hot-products">
         <h1></h1>
         <h2>Hot Products</h2>
-        <ul class="products clearfix">
+        <ul class="products clearfix" id="hot">
             {% for item, image, cost in products %}
                 <li class="product-wrapper">
                     <div class="product-card">
