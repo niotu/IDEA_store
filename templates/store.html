@@ -3,7 +3,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-    <h1>STORE PAGE</h1>
-
+    <div class="store-catalog">
+        <ul class="products clearfix">
+            {% for item, image, cost in products %}
+                <li class="product-wrapper">
+                    <div class="product-card">
+                        <img src={{ image }} alt='image' width=300 height=300>
+                        <a href="" class="product">{{ item }}</a>
+                        <h4>{{ cost }} $ </h4>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
