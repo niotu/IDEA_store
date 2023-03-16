@@ -11,13 +11,14 @@ class Application():
 
 def get_hot_products():
     prefix = './static/images/'
-    chair1 = ['Small lounge chair MD4', prefix + 'lounge-chair.jpg', 499]
-    table1 = ['Open-air Coffee table', prefix + 'open-air-coffee-table.jpg', 8999]
-    blanket = ['Wool blanket №4', prefix + 'wool-blanket.jpg', 159]
+    chair1 = ['Small lounge chair MD4', prefix + 'lounge-chair.jpg', 499, '#']
+    table1 = ['Open-air Coffee table', prefix + 'open-air-coffee-table.jpg', 8999, '#']
+    blanket = ['Wool blanket №4', prefix + 'wool-blanket.jpg', 159, '#']
+    sofa1 = ['Love sofa 2-seater', prefix + 'love-sofa.jpg', 6699, '#']
 
     catalog = [chair1, table1, blanket]
     shuffle(catalog)
-    return catalog, {'item': 'Pouf', 'image': prefix + 'pouf.jpg', 'cost': 199}
+    return catalog, {'item': 'Love sofa 2-seater', 'image': prefix + 'love-sofa.jpg', 'cost': 6699, 'link': '#'}
 
 
 def get_catalog():
@@ -27,7 +28,8 @@ def get_catalog():
     table1 = ['Open-air Coffee table', prefix + 'open-air-coffee-table.jpg', 8999]
     puff = ['Pouf', prefix + 'pouf.jpg', 199]
     blanket = ['Wool blanket №4', prefix + 'wool-blanket.jpg', 159]
+    sofa1 = ['Love sofa 2-seater', prefix + 'love-sofa.jpg', 6699]
 
-    catalog = [chair1, chair2, table1, puff, blanket]
+    catalog = [chair1, chair2, table1, puff, blanket, sofa1]
     shuffle(catalog)
     return catalog

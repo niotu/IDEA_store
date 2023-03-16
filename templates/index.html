@@ -27,16 +27,16 @@
             <div class="big-product-card">
                 <div class="product-card">
                     <img src={{ big_info['image'] }} alt='image' width=660 height=660>
-                    <a href="" class="product">{{ big_info['item'] }}</a>
+                    <a href={{ big_info['link'] }}>{{ big_info['item'] }}</a>
                     <h4>{{ big_info['cost'] }} $ </h4>
                 </div>
             </div>
             <ul class="products clearfix" >
-                {% for item, image, cost in products %}
+                {% for item, image, cost, link in products %}
                     <li class="product-wrapper">
                         <div class="product-card">
                             <img src={{ image }} alt='image' width=300 height=300>
-                            <a href="" class="product">{{ item }}</a>
+                            <a href={{ link }}>{{ item }}</a>
                             <h4>{{ cost }} $ </h4>
                         </div>
                     </li>
