@@ -17,7 +17,7 @@ def get_hot_products():
 
     catalog = [chair1, table1, blanket]
     shuffle(catalog)
-    return catalog
+    return catalog, {'item': 'Pouf', 'image': prefix + 'pouf.jpg', 'cost': 199}
 
 
 def get_catalog():

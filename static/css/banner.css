@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Raleway:wght@100&display=swap');
+
+.banner-container {
+    width: 100%;
+    /*height: 100vh;*/
+    padding-bottom: 10px;
+}
+
+.banner img {
+    width: 50%;
+    height: 100%;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: #1E1E1E;
+    margin-right: 10px;
+    /*float: right;*/
+    position: relative;
+}
+
+.banner-text {
+    width: 50%;
+    padding-top: 10%;
+    padding-left: 8%;
+    position: relative;
+}
+
+.banner-text h1 {
+    font-family: 'Raleway';
+    /*width: 80%;*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    color: #C2C0A6;
+}
+
+.banner-text button {
+    /*margin-top: 50px;*/
+    margin: 100px 0;
+    width: 25vh;
+    height: 5vh;
+    color: #1E1E1E;
+    font-weight: 500;
+    background-color: #C2C0A6;
+    border: transparent;
+    transition: all 0.3s ease 0s;
+}
+
+.banner-text button:hover {
+    transition: all 0.3s ease 0s;
+    color: #C2C0A6;
+    background: transparent;
+    border: #C2C0A6 1px solid;
+}
+
+.banner-text button:checked {
+    transition: all 0.3s ease 0s;
+    color: #C2C0A6;
+    border: #C2C0A6 1px solid;
+}

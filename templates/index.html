@@ -24,6 +24,13 @@
     <div class="hot-products">
         <h1></h1>
         <h2>Hot Products</h2>
+        <div class="big-product-card">
+            <div class="product-card">
+                <img src={{ big_info['image'] }} alt='image' width=620 height=620>
+                <a href="" class="product">{{ big_info['item'] }}</a>
+                <h4>{{ big_info['cost'] }} $ </h4>
+            </div>
+        </div>
         <ul class="products clearfix" id="hot">
             {% for item, image, cost in products %}
                 <li class="product-wrapper">

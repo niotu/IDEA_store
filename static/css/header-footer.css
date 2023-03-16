@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Raleway:wght@100&display=swap');
+
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #C2C0A6;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    background-color: #1E1E1E;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: static;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+li a {
+    transition: all 0.3s ease 0s;
+}
+
+li a:hover {
+    transition: all 0.3s ease 0s;
+    color: #FFFBC5;
+}
+
+header button {
+    transition: all 0.3s ease 0s;
+    color: #1E1E1E;
+    padding: 9px;
+    background-color: rgba(194, 192, 166, 1);
+    border-radius: 15px;
+    border: transparent;
+    cursor: pointer;
+}
+
+header button:hover {
+    transition: all 0.3s ease 0s;
+    background-color: #FFFBC5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/*------------------------------------------===========-===-===========-----------------------------------------*/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+    background-color: #1E1E1E;
+}
+
+.footer-col {
+    width: 20%;
+    padding: 35px 15px;
+}
+
+.footer-row {
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 15%;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-col h4 {
+    margin-bottom: 18px;
+    text-transform: capitalize;
+    color: #C2C0A6;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: #FFFBC5;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li a {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    padding-left: 8px;
+}
+
+.company-info {
+    align-content: end;
+    width: 30%;
+    margin: 0 19% 0 -12%;
+    padding: 10px 50px;
+}
+
+footer p {
+    padding: 60px 0;
+    color: #C2C0A6;
+    font-size: 18px;
+}
