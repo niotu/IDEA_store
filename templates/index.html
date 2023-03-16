@@ -3,6 +3,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <link rel="stylesheet" href="../static/css/banner.css">
+    <link rel="stylesheet" href="../static/css/prods.css">
+    <link rel="stylesheet" href="../static/css/scroll.css">
     <div class="banner-container">
         <div class="banner">
             <img src="../static/banners/banner1.png" alt="banner">
@@ -22,7 +25,10 @@
     </section>
 
     <div class="hot-products">
-        <h2 id="hot">Hot Products</h2>
+        <div class="titles">
+            <h2 id="hot">Hot Products</h2>
+            <a href="/store">see all</a>
+        </div>
         <div class="cards">
             <div class="big-product-card">
                 <div class="product-card">
@@ -31,7 +37,7 @@
                     <h4>{{ big_info['cost'] }} $ </h4>
                 </div>
             </div>
-            <ul class="products clearfix" >
+            <ul class="products clearfix">
                 {% for item, image, cost, link in products %}
                     <li class="product-wrapper">
                         <div class="product-card">

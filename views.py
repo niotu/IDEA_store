@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 
-from data.app import get_hot_products
+from data.app import get_hot_products, get_catalog
 
 app = Flask(__name__)
 
@@ -15,7 +15,11 @@ def base():
 
 @app.route('/store')
 def store():
-    return render_template('store.html')
+    catalog = get_catalog()
+    filter_data = (min([x.get('price') for x in catalog]), max([x.get('price') for x in catalog]))
+    context = {'catalog': catalog, 'filter_data': filter_data}
+    # print(context)
+    return render_template('store.html', **context)
 
 
 def main():

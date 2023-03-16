@@ -3,17 +3,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="store-catalog">
-        <ul class="products clearfix">
-            {% for item, image, cost in products %}
-                <li class="product-wrapper">
-                    <div class="product-card">
-                        <img src={{ image }} alt='image' width=300 height=300>
-                        <a href="" class="product">{{ item }}</a>
-                        <h4>{{ cost }} $ </h4>
-                    </div>
-                </li>
-            {% endfor %}
-        </ul>
+    <link rel="stylesheet" href="../static/css/store.css">
+    <div class="catalog">
+        <div class="titles">
+            <h2 id="hot">Catalogue</h2>
+            <div class="interface">
+            </div>
+        </div>
+        <div class="catalog-wrapper">
+            <div class="filters">
+                <div class="price">
+                    <h4>Price</h4>
+                    <input type="range" id="price"
+                           value={{ filter_data['min_price'] }} min={{ filter_data['min_price'] }}
+                           max={{ filter_data['max_price'] }}>
+                </div>
+            </div>
+
+            <ul class="products clearfix">
+                {% for item in catalog %}
+                    <li class="product-wrapper">
+                        <div class="product-card">
+                            <img src={{ item['image'] }}  width={{ 620 if loop.index % 4 == 0 else 300 }}
+                                 height={{ 663 if loop.index % 4 == 0 else 300 }}  alt="image">
+                            <a href={{ item['link'] }}>{{ item['name'] }}</a>
+                            <h4>{{ item['price'] }} $ </h4>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 {% endblock %}

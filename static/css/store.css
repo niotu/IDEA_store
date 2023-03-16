@@ -1,60 +1,65 @@
-.hot-products h2 {
+.catalog {
+    width: 100%;
+    padding: 8% 15%;
+}
+
+.catalog-wrapper {
+    display: flex;
+    float: left;
+    /*padding-right: 20px;*/
+}
+
+.filters {
+    padding-right: 150px;
+    width: 25%;
+}
+
+.catalog h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 40px;
 }
 
 .titles {
-    padding-left: 15%;
     padding-top: 8%;
-    padding-right: 15%;
+    padding-bottom: 8%;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
-.titles a {
-    transition: all 0.3s ease 0s;
-    text-decoration: underline;
-    text-transform: uppercase;
-    color: #1E1E1E;
-}
-
-.titles a:hover {
-    transition: all 0.3s ease 0s;
-    opacity: 0.5;
-}
-
-.hot-products {
-    width: 100%;
-    padding: 100px 0;
-}
 
 .cards {
     display: flex;
-    padding: 0 15%;
+    /*width: 10%;*/
+    padding-right: 20px;
+    float: left;
+    position: relative;
+}
+
+
+.products-clearfix {
+    width: 100%;
+    /*padding: 100px 0;*/
 }
 
 .product-wrapper {
-    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
-    /*width: 40%;*/
-    float: right;
+    /*width: 50%;*/
+    float: left;
     position: relative;
 }
 
 .product-card {
-    transition: all .2s ease;
-    display: block;
+    transition: width .2s;
+    display: table;
     width: 300px;
     position: relative;
     background: transparent;
-    margin: 0 0 17px 0;
+    padding: 0 0 20px 0;
 }
 
-.big-product-card {
-    width: 640px;
-}
 
 .product-card h4 {
     font-family: 'Montserrat', sans-serif;
