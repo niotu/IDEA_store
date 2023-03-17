@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def base():
     prods, big = get_hot_products()
-    context = {'products': prods, 'big_info': big}
+    context = {'title': 'IDEA', 'products': prods, 'big_info': big}
     return render_template('index.html', **context)
 
 
@@ -17,7 +17,7 @@ def base():
 def store():
     catalog = get_catalog()
     filter_data = (min([x.get('price') for x in catalog]), max([x.get('price') for x in catalog]))
-    context = {'catalog': catalog, 'filter_data': filter_data}
+    context = {'title': 'IDEA - catalog', 'catalog': catalog, 'filter_data': filter_data}
     # print(context)
     return render_template('store.html', **context)
 

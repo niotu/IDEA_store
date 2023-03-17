@@ -14,9 +14,17 @@
             <div class="filters">
                 <div class="price">
                     <h4>Price</h4>
-                    <input type="range"
-                           value={{ filter_data['min_price'] }} min={{ filter_data['min_price'] }}
-                           max={{ filter_data['max_price'] }}>
+                    <div class="slider">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                        <input type="range" class="range-min"
+                               value={{ filter_data['min_price'] }} min={{ filter_data['min_price'] }}
+                               max={{ filter_data['max_price'] }}>
+                        <input type="range" class="range-max"
+                               value={{ filter_data['min_price'] }} min={{ filter_data['min_price'] }}
+                               max={{ filter_data['max_price'] }}>
+                    </div>
                     <div class="output">
                         <input type="number" id="min_price" value={{ filter_data['min_price'] }}>
                         <style>input#max_price:before {
