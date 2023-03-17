@@ -47,7 +47,7 @@
                         <div class="product-card">
                             <img src={{ item['image'] }}  width={{ 620 if loop.index % 4 == 0 else 300 }}
                                  height={{ 663 if loop.index % 4 == 0 else 300 }}  alt="image">
-                            <a href={{ item['link'] }}>{{ item['name'] }}</a>
+                            <a href={{ 'store/' + item['link'] }}>{{ item['name'] }}</a>
                             <h4>{{ item['price'] }} $ </h4>
                         </div>
                     </li>

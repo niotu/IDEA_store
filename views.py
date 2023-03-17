@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 
-from data.app import get_hot_products, get_catalog
+from data.app import get_hot_products, get_catalog, get_prod_by_link
 
 app = Flask(__name__)
 
@@ -21,6 +21,12 @@ def store():
     # print(context)
     return render_template('store.html', **context)
 
+@app.route('/store/<link>')
+def product(link):
+    item = get_prod_by_link(link)
+    title = item.get_title()
+    context = {"title": title, 'item': item}
+    return render_template('product.html', **context)
 
 def main():
     app.run(debug=True)
