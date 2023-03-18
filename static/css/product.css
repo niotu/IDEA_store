@@ -23,15 +23,36 @@
 }
 
 .info h2:after {
-    margin-top: 30%;
+    margin-top: 5%;
     content: "";
     height: 1px;
-    /*width: 10px;*/
+    width: 300px;
     display: block;
     opacity: 0.5;
     background: #545454;
 }
 
+.info h4 {
+    padding-top: 5%;
+    font-family: Raleway, sans-serif;
+    color: #1E1E1E;
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .info p {
     padding-top: 50px;
+}
+
+.info input {
+    margin-top: 10px;
+    border: 1px solid #545454;
+    color: #545454;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+}
+
+.info input::-webkit-outer-spin-button {
+    /*webkit-appearance: ;*/
 }

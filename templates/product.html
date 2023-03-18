@@ -9,7 +9,10 @@
         <div class="info">
             <h1>{{ item.name }}</h1>
             <h2>{{ item.price }} $ </h2>
-            <input type="number" id="quantity">
+            <div class="amount-input">
+                <h4>Quantity</h4>
+                <input type="number" id="quantity" value="1" min="1" max="50">
+            </div>
             <p>{{ item.description }}</p>
         </div>
     </div>
