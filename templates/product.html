@@ -3,5 +3,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>{{ item.name }}</h1>
+    <link rel="stylesheet" href="../static/css/product.css">
+    <div class="content-wrapper">
+        <img src={{ item.image }} width="660" height="660" alt="product">
+        <div class="info">
+            <h1>{{ item.name }}</h1>
+            <h2>{{ item.price }} $ </h2>
+            <input type="number" id="quantity">
+            <p>{{ item.description }}</p>
+        </div>
+    </div>
 {% endblock %}

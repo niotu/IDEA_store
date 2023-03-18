@@ -1,4 +1,4 @@
-from random import shuffle
+from random import shuffle, choices
 
 from data.product import Product
 
@@ -19,14 +19,10 @@ prods = [Product('Small lounge chair MD4', 'lounge-chair.jpg', 499),
 
 
 def get_hot_products():
-    prefix = '../static/images/'
-    chair1 = ['Small lounge chair MD4', prefix + 'lounge-chair.jpg', 499, '#']
-    table1 = ['Open-air Coffee table', prefix + 'open-air-coffee-table.jpg', 8999, '#']
-    blanket = ['Wool blanket №4', prefix + 'wool-blanket.jpg', 159, '#']
-
-    catalog = [chair1, table1, blanket]
+    catalog = choices(prods, k=3)
+    # print(catalog)
     shuffle(catalog)
-    return catalog, {'item': 'Love sofa 2-seater', 'image': prefix + 'love-sofa.jpg', 'cost': 6699, 'link': '#'}
+    return catalog, Product('Love sofa 2-seater', 'love-sofa.jpg', 6699)
 
 
 def get_catalog():

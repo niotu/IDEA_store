@@ -1,0 +1,37 @@
+.content-wrapper {
+    display: flex;
+    padding: 4% 10%;
+}
+
+.info {
+    padding-left: 15%;
+}
+
+.info h1 {
+    font-family: Montserrat;
+    color: #1E1E1E;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.info h2 {
+    padding-top: 5%;
+    font-family: Raleway, sans-serif;
+    color: #1E1E1E;
+    font-size: 40px;
+    font-weight: 50;
+}
+
+.info h2:after {
+    margin-top: 30%;
+    content: "";
+    height: 1px;
+    /*width: 10px;*/
+    display: block;
+    opacity: 0.5;
+    background: #545454;
+}
+
+.info p {
+    padding-top: 50px;
+}
