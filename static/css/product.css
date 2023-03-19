@@ -47,6 +47,9 @@
 
 .info p {
     padding-top: 50px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
 }
 
 .info input {
@@ -104,7 +107,10 @@
     transition: all .3s ease-out;
 }
 
+/*------------------------------------------------------------------------------------------------------*/
+
 .other-details {
+    display: table;
     /*margin-top: 10%;*/
     width: 80%;
     margin: 10% 10%;
@@ -120,26 +126,25 @@
 }
 
 li img {
-    width: 500px;
-    height: auto;
+    width: auto;
+    height: 660px;
     margin-right: 10px;
 }
 
 .other-details .images-wrapper {
+    text-align: center;
+    width: 100%;
     display: flex;
-    /*width: 50%;*/
     float: left;
-    flex-direction: row;
     position: relative;
-    /*flex-wrap: wrap;*/
     padding-bottom: 20px;
 }
 
-.other-details h3 {
+.thanks{
+    display: block;
     font-family: Raleway, sans-serif;
     font-size: 32px;
     font-weight: 200;
     text-align: center;
-    /*margin-top: 100px;*/
 }
 
