@@ -132,5 +132,14 @@ li img {
     flex-direction: row;
     position: relative;
     /*flex-wrap: wrap;*/
+    padding-bottom: 20px;
+}
+
+.other-details h3 {
+    font-family: Raleway, sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    text-align: center;
+    /*margin-top: 100px;*/
 }
 
