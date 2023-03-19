@@ -5,7 +5,9 @@ from data.CONSTANTS import PREFIX
 
 class Product:
     def __init__(self, name, image, price, link='#', description='The furniture of new era', amount=1000, category='',
-                 other_photos=[]):
+                 other_photos=None):
+        if other_photos is None:
+            other_photos = []
         self.name = name
         self.image = PREFIX + image
         self.price = price

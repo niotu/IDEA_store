@@ -44,7 +44,7 @@
 }
 
 .product-card {
-    transition: all .2s ease;
+    transition: all .3s ease;
     display: block;
     width: 300px;
     position: relative;
@@ -63,7 +63,7 @@
     color: #1E1E1E;
 }
 
-.product-card a {
+.product-card p {
     transition: all 0.3s ease 0s;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -71,11 +71,17 @@
     color: #1E1E1E;
 }
 
-.product-card a:hover {
+.product-card p:hover {
     transition: all 0.3s ease 0s;
     font-family: 'Montserrat', sans-serif;
-    padding-left: 4px;
+    padding-left: 8px;
     font-weight: 400;
     font-size: 20px;
     color: #545454;
 }
+
+.product-card:hover {
+    transition: all 0.2s ease 0s;
+    transform: scale(1.03);
+}
+
