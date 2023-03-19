@@ -67,15 +67,6 @@ input::-webkit-inner-spin-button {
 }
 
 
-.cards {
-    display: flex;
-    /*width: 10%;*/
-    padding-right: 20px;
-    float: left;
-    position: relative;
-}
-
-
 .products-clearfix {
     width: 100%;
     /*padding: 100px 0;*/

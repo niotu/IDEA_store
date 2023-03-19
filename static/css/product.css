@@ -1,3 +1,8 @@
+.content {
+    width: 100%;
+}
+
+
 .content-wrapper {
     display: flex;
     padding: 4% 10%;
@@ -26,7 +31,7 @@
     margin-top: 5%;
     content: "";
     height: 1px;
-    width: 300px;
+    width: 30%;
     display: block;
     opacity: 0.5;
     background: #545454;
@@ -73,6 +78,7 @@
     margin-top: 2%;
     width: 50%;
 }
+
 .info button:hover {
     transition: all .3s ease-out;
     background: #141414;
@@ -102,7 +108,7 @@
     /*margin-top: 10%;*/
     width: 80%;
     margin: 10% 10%;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .other-details h2 {
@@ -113,17 +119,18 @@
     font-weight: 50;
 }
 
-.other-details img {
-    width: auto;
-    height: 1000px;
-    padding-right: 10px;
+li img {
+    width: 500px;
+    height: auto;
+    margin-right: 10px;
 }
 
 .other-details .images-wrapper {
     display: flex;
+    /*width: 50%;*/
     float: left;
-    width: 100%;
-    /*text-align: center;*/
-    /*justify-content: center;*/
+    flex-direction: row;
+    position: relative;
+    /*flex-wrap: wrap;*/
 }
 
