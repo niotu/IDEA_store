@@ -4,7 +4,8 @@ from data.CONSTANTS import PREFIX
 
 
 class Product:
-    def __init__(self, name, image, price, link='#', description='The furniture of new era', amount=1000, category='', other_photos=[]):
+    def __init__(self, name, image, price, link='#', description='The furniture of new era', amount=1000, category='',
+                 other_photos=[]):
         self.name = name
         self.image = PREFIX + image
         self.price = price
@@ -23,6 +24,7 @@ class Product:
     def get_other_images(self):
         random.shuffle(self.other_photos)
         return self.other_photos
+
 
 '''вот такой должен быть аутпут из бд'''
 # prods = [Product('Small lounge chair MD4', 'lounge-chair.jpg', 499),

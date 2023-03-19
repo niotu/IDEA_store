@@ -21,7 +21,11 @@ prods = [Product('Small lounge chair MD4', 'lounge-chair.jpg', 499,
                      'https://vipp.com/sites/default/files/vipp-716-outdoor-coffee-table-o90-teak-01-detail.jpg',
                      'https://vipp.com/sites/default/files/_vipp-714-716-outdoor-coffee-tables-ceramic-teak-01_2.jpg',
                      'https://vipp.com/sites/default/files/styles/hero_hotel__2/public/vipp-716-open-air-coffee-table-o90-teak-detail-01_0.jpg?itok=OYHrcVxa']),
-         Product('Pouf', 'pouf.jpg', 249),
+         Product('Pouf', 'pouf.jpg', 249,
+                 description="With its geometric, six-piece construction in Soprano upholstery, the Vipp655 pouf furnishes the living room with a sculpture of comfort. Intended as an extra seat or side table, the pouf is a versatile addition to the Vipp furniture collection.",
+                 other_photos=['https://vipp.com/sites/default/files/2022_06_15_vipp127944.jpg',
+                               'https://vipp.com/sites/default/files/dscf2380.jpg',
+                               'https://vipp.com/sites/default/files/styles/hero_hotel__2/public/vipp-655-pouf-soprano03-01_1.jpg?itok=cg2-59RI']),
          Product('Wool blanket №4', 'wool-blanket.jpg', 169,
                  description='The Vipp wool blanket is warm and ultra-soft addition for the living room or bedroom. This wool blanket is woven from all-natural wool and features a discreetly woven pattern. Available in two colour options.',
                  other_photos=['https://vipp.com/sites/default/files/vipp-112-116-textiles-living-03_web1_8.jpg']),
@@ -53,7 +57,12 @@ prods = [Product('Small lounge chair MD4', 'lounge-chair.jpg', 499,
                  other_photos=['https://vipp.com/sites/default/files/vipp-loft-bath05_20.jpg',
                                'https://vipp.com/sites/default/files/styles/hero_hotel__2/public/vipp-981-983-bathmodule-detail-5_0.jpg?itok=sSIY8hQT',
                                'https://vipp.com/sites/default/files/styles/hero_hotel__2/public/vipp-981-983-bathmodule-detail-1.jpg?itok=e_yTTVag']),
-         Product('Cabin round table, light oak base', 'vipp494_light-oak_jura_01-grey.jpg', 6259)
+         Product('Cabin round table, light oak base', 'vipp494_light-oak_jura_01-grey.jpg', 6259,
+                 description='The Vipp Cabin round table is a medium-sized table for the dining room or kitchen. This table features a base of solid, oiled light oak with a marble tabletop.'
+                             'PLEASE NOTE that this product will ship as a white glove delivery. This is included in the price. We will contact you within 5 days after the order has been placed to arrange delivery.',
+                 other_photos=['https://vipp.com/sites/default/files/vipp-495-cabin-round-table-lightoak-01.jpg',
+                               'https://vipp.com/sites/default/files/vipp-495-cabin-round-table-lightoak-02_1.jpg',
+                               'https://vipp.com/sites/default/files/vipp462-lodge-chair-barnum-01-high_1.jpg'])
          ]
 
 
