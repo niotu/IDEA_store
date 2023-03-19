@@ -43,13 +43,15 @@
 
             <ul class="products clearfix">
                 {% for item in catalog %}
-                    <li class="product-wrapper" >
-                        <div class="product-card">
-                            <img src={{ item['image'] }}  width="{{ 620 if loop.index % 4 == 0 else 300 }}"
-                                    height={{ 663 if loop.index % 4 == 0 else 300 }}  alt="image">
-                            <a href={{ 'store/' + item['link'] }}>{{ item['name'] }}</a>
-                            <h4>{{ item['price'] }} $ </h4>
-                        </div>
+                    <li class="product-wrapper">
+                        <a href="{{ 'store/' + item.link }}">
+                            <div class="product-card">
+                                <img src={{ item.image }}  width="{{ 620 if loop.index % 4 == 0 else 300 }}"
+                                     height={{ 663 if loop.index % 4 == 0 else 300 }}  alt="image">
+                                <p>{{ item.name }}</p>
+                                <h4>{{ item.price }} $ </h4>
+                            </div>
+                        </a>
                     </li>
                 {% endfor %}
             </ul>

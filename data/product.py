@@ -15,9 +15,6 @@ class Product:
         self.category = category
         self.other_photos = other_photos
 
-    def get_card(self):
-        return {'name': self.name, 'image': self.image, 'price': self.price, 'link': self.link}
-
     def get_title(self):
         return self.name
 
