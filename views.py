@@ -25,7 +25,8 @@ def store():
 def product(link):
     item = get_prod_by_link(link)
     title = item.get_title()
-    context = {"title": title, 'item': item}
+    images = item.get_other_images()
+    context = {"title": title, 'item': item, 'images': images}
     return render_template('product.html', **context)
 
 def main():

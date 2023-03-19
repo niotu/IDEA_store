@@ -2,7 +2,7 @@ from data.CONSTANTS import PREFIX
 
 
 class Product:
-    def __init__(self, name, image, price, link='#', description='The furniture of new era', amount=1000, category=''):
+    def __init__(self, name, image, price, link='#', description='The furniture of new era', amount=1000, category='', other_photos=[]):
         self.name = name
         self.image = PREFIX + image
         self.price = price
@@ -10,12 +10,16 @@ class Product:
         self.description = description
         self.amount = amount
         self.category = category
+        self.other_photos = other_photos
 
     def get_card(self):
         return {'name': self.name, 'image': self.image, 'price': self.price, 'link': self.link}
 
     def get_title(self):
         return self.name
+
+    def get_other_images(self):
+        return self.other_photos
 
 
 '''вот такой должен быть аутпут из бд'''

@@ -5,7 +5,9 @@
 {% block content %}
     <link rel="stylesheet" href="../static/css/product.css">
     <div class="content-wrapper">
-        <img src={{ item.image }} width="660" height="660" alt="product">
+        <a href="#other" class="image-container">
+            <img src={{ item.image }} width="660" height="660" alt="product" class="main-image">
+        </a>
         <div class="info">
             <h1>{{ item.name }}</h1>
             <h2>{{ item.price }} $ </h2>
@@ -14,6 +16,19 @@
                 <input type="number" id="quantity" value="1" min="1" max="50">
             </div>
             <p>{{ item.description }}</p>
+            <button class="btn">
+                Add to cart
+            </button>
         </div>
     </div>
+    <div class="other-details" id="other">
+        <h2> Other details</h2>
+        <div class="images-wrapper">
+            {% for img in images %}
+                <img src="{{ img }}" alt='image' class="extra-image">
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../static/scripts/scroll.js"></script>
 {% endblock %}

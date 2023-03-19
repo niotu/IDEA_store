@@ -56,3 +56,74 @@
 .info input::-webkit-outer-spin-button {
     /*webkit-appearance: ;*/
 }
+
+.info button {
+    height: 40px;
+    transition: all 0.3s ease;
+    padding: 1% 2%;
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 16px;
+    color: #C2C0A6;
+    border: transparent;
+    /*outline: none;*/
+    /*border: 2px solid #C2C0A6;*/
+    background-color: #1E1E1E;
+    text-align: center;
+    margin-top: 2%;
+    width: 50%;
+}
+.info button:hover {
+    transition: all .3s ease-out;
+    background: #141414;
+
+    color: #FFFBC5;
+    font-weight: 400;
+}
+
+.info button:active {
+    transition: all .1s ease-out;
+    background: transparent;
+    color: #1E1E1E;
+    border: 1px solid #1E1E1E;
+}
+
+.main-image:hover {
+    transform: scale(1.02);
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.main-image {
+    transition: all .3s ease-out;
+}
+
+.other-details {
+    /*margin-top: 10%;*/
+    width: 80%;
+    margin: 10% 10%;
+    text-align: center;
+}
+
+.other-details h2 {
+    padding-bottom: 5%;
+    font-family: Montserrat, sans-serif;
+    color: #1E1E1E;
+    font-size: 40px;
+    font-weight: 50;
+}
+
+.other-details img {
+    width: auto;
+    height: 1000px;
+    padding-right: 10px;
+}
+
+.other-details .images-wrapper {
+    display: flex;
+    float: left;
+    width: 100%;
+    /*text-align: center;*/
+    /*justify-content: center;*/
+}
+
