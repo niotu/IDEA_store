@@ -13,7 +13,7 @@
 }
 
 .info h1 {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     color: #1E1E1E;
     font-size: 60px;
     font-weight: 300;
@@ -52,24 +52,48 @@
     font-weight: 100;
 }
 
-.info input {
-    margin-top: 10px;
-    border: 1px solid #545454;
-    color: #545454;
-    width: 60px;
-    height: 30px;
+input[type="number"] {
+    background: transparent;
+    border-left: 1px solid #1E1E1E;
+    border-right: 1px solid #1E1E1E;
+    border-top: transparent;
+    border-bottom: transparent;
+    width: 34%;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
     text-align: center;
 }
 
-.info input::-webkit-outer-spin-button {
-    /*webkit-appearance: ;*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
-.info button {
+.amount-input {
+    margin-top: 10px;
+    width: 120px;
+    border: 1px solid #1E1E1E;
+    height: 40px;
+    display: inline-flex;
+}
+
+.amount-input button {
+    color: #1E1E1E;
+    border: transparent;
+    width: 33%;
+    /*background: red;*/
+    background: transparent;
+    border: transparent;
+    position: relative;
+}
+
+
+.info button[class='btn'] {
     height: 40px;
     transition: all 0.3s ease;
     padding: 1% 2%;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #C2C0A6;
@@ -82,7 +106,7 @@
     width: 50%;
 }
 
-.info button:hover {
+.info button[class='btn']:hover {
     transition: all .3s ease-out;
     background: #141414;
 
@@ -140,7 +164,7 @@ li img {
     padding-bottom: 20px;
 }
 
-.thanks{
+.thanks {
     display: block;
     font-family: Raleway, sans-serif;
     font-size: 32px;
