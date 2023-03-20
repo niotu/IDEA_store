@@ -14,7 +14,7 @@
             <h4>Quantity</h4>
             <div class="amount-input">
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
-                <input class="quantity" min="0" max="50" name="quantity" value="1" type="number" disabled="disabled" readonly>
+                <input class="quantity" min="1" max="50" name="quantity" value="1" type="number" disabled="disabled" readonly>
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
             </div>
             <p>{{ item.description }}</p>
