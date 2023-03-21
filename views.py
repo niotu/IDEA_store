@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 
-from data.app import get_hot_products, get_catalog, get_prod_by_link, prods
+from data.app import get_hot_products, get_prod_by_link, prods
 
 app = Flask(__name__)
 
@@ -21,6 +21,7 @@ def store():
     # print(context)
     return render_template('store.html', **context)
 
+
 @app.route('/store/<link>')
 def product(link):
     item = get_prod_by_link(link)
@@ -28,6 +29,13 @@ def product(link):
     images = item.get_other_images()
     context = {"title": title, 'item': item, 'images': images}
     return render_template('product.html', **context)
+
+
+@app.route('/login')
+def login():
+    context = {"title": "Login"}
+    return render_template('login.html', **context)
+
 
 def main():
     app.run(debug=True)

@@ -1,0 +1,47 @@
+.content-wrapper {
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.login-window {
+    margin: 12% 40%;
+    width: 20%;
+    background: transparent;
+    position: relative;
+    /*border: 1px solid #1E1E1E;*/
+}
+
+.login-window h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.login-window input {
+    text-align: center;
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    border: 2px solid #1E1E1E;
+}
+
+.login-window button {
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    color: #C2C0A6;
+    background-color: #1E1E1E;
+    border: transparent;
+    transition: all 0.3s ease;
+}
+
+.login-window button:hover {
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #1E1E1E;
+    border: 2px solid #1E1E1E;
+}
+
+.login-window button:active {
+    scale: 0.95;
+}
