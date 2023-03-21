@@ -37,5 +37,12 @@ def login():
     return render_template('login.html', **context)
 
 
+@app.route('/register')
+def register():
+    context = {"title": "Register"}
+    return render_template('register.html', **context)
+
+
+
 def main():
     app.run(debug=True)
