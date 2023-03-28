@@ -1,0 +1,9 @@
+.content-wrapper {
+    margin: 10% 8%;
+}
+
+.name-info h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 40px
+}

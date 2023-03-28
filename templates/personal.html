@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="../static/css/personal.css">
+
+    <div class="content-wrapper">
+        <div class="name-info">
+            <h2 class="name">{{ user.name }}</h2>
+        </div>
+        <div class="cart-info">
+            <h2 class="cart">Your cart</h2>
+        </div>
+    </div>
+{% endblock %}

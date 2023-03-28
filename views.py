@@ -1,10 +1,8 @@
-import datetime
-
 from flask import Flask, redirect, render_template
 from flask_login import login_user, login_required, logout_user, LoginManager
 
 from data import db_session
-from data.app import get_hot_products, get_prod_by_link, prods
+from data.app import get_hot_products, get_prod_by_link, prods, get_user_by_id
 from data.users import User
 from forms.user_form import LoginForm, RegisterForm
 
@@ -77,6 +75,13 @@ def register():
         db_sess.commit()
         return redirect('/login')
     return render_template('register.html', title='Регистрация', form=form)
+
+
+@app.route('/personal/<id>')
+def personal(id):
+    user = get_user_by_id(id)
+    context = {'title': 'Personal', 'user': user}
+    return render_template('personal.html', **context)
 
 
 @app.route('/logout')

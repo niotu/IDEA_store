@@ -83,3 +83,9 @@ def get_prod_by_link(link):
     for p in prods:
         if p.link == link:
             return p
+
+
+def get_user_by_id(user_id):
+    for u in users:
+        if u.id == user_id:
+            return u
