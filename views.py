@@ -77,9 +77,9 @@ def register():
     return render_template('register.html', title='Регистрация', form=form)
 
 
-@app.route('/personal/<id>')
-def personal(id):
-    user = get_user_by_id(id)
+@app.route('/personal')
+def personal():
+    user = {'name': 'John', 'surname': 'Daw', 'address': '2372 Broadway, New York, NY, USA'}
     context = {'title': 'Personal', 'user': user}
     return render_template('personal.html', **context)
 

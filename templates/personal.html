@@ -7,7 +7,20 @@
 
     <div class="content-wrapper">
         <div class="name-info">
-            <h2 class="name">{{ user.name }}</h2>
+            <h2 class="name">{{ user['name'] }} {{ user['surname'] }}</h2>
+            <div class="description">
+                <div class="address">
+                    <h4>Address:</h4>
+                    <input type="text" id="address" value="{{ user['address'] }}">
+                </div>
+                <div class="payment">
+                    <h4>Payment methods</h4>
+                    <select name="payment-method">
+                        <option value="none">Choose payment method</option>
+                        <option value="Crypto">Crypto</option>
+                    </select>
+                </div>
+            </div>
         </div>
         <div class="cart-info">
             <h2 class="cart">Your cart</h2>
