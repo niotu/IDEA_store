@@ -8,14 +8,9 @@
     font-size: 40px
 }
 
-.name-info .description {
-    width: 40%;
-    text-align: center
-}
+.name-info .address input {
 
-.name-info .address, .payment {
-    display: flex;
-    justify-content: space-between;
+
 }
 
 .name-info::after {
