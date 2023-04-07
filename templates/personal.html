@@ -9,6 +9,9 @@
         <div class="name-info">
             <h2 class="name">{{ user['name'] }} {{ user['surname'] }}</h2>
             <div class="description">
+                <a href="/logout">
+                    logout
+                </a>
                 <div class="address">
                     <h4>Address:</h4>
                     <input type="text" id="address" value="{{ user['address'] }}">
