@@ -7,10 +7,18 @@
 
     <div class="content-wrapper">
         <div class="name-info">
-            <h2 class="name">{{ user['name'] }} {{ user['surname'] }}</h2>
+            <h2 class="personal-data">Personal Data</h2>
             <div class="description">
+                <div class="name">
+                    <h4>Name</h4>
+                    <input type="text" id="name" value="{{ user['name'] }}">
+                </div>
+                <div class="phone-number">
+                    <h4>Phone Number</h4>
+                    <input type="number" id="phone-number" value="{{ user['phone-number'] }}" maxlength="11" >
+                </div>
                 <div class="address">
-                    <h4>Address:</h4>
+                    <h4>Address</h4>
                     <input type="text" id="address" value="{{ user['address'] }}">
                 </div>
                 <div class="payment">
@@ -20,10 +28,27 @@
                         <option value="Crypto">Crypto</option>
                     </select>
                 </div>
+                <button class="save-data">Save Data</button>
             </div>
         </div>
         <div class="cart-info">
             <h2 class="cart">Your cart</h2>
+            <div class="cart-products">
+                <ul class="products clearfix">
+                {% for item in products %}
+                    <li class="product-wrapper">
+                        <a href="{{ 'store/' + item.link }}">
+                            <div class="product-card">
+                                <img src={{ item.image }}  width="{{ 620 if loop.index % 4 == 0 else 300 }}"
+                                     height={{ 663 if loop.index % 4 == 0 else 300 }}  alt="image">
+                                <p>{{ item.name }}</p>
+                                <h4>{{ item.price }} $ </h4>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            </div>
         </div>
     </div>
 {% endblock %}

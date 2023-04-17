@@ -2,7 +2,7 @@ from flask import Flask, redirect, render_template
 from flask_login import login_user, login_required, logout_user, LoginManager
 
 from data import db_session
-from data.app import get_hot_products, get_prod_by_link, prods, get_user_by_id
+from data.app import get_hot_products, get_prod_by_link, prods
 from data.users import User
 from forms.user_form import LoginForm, RegisterForm
 
@@ -77,10 +77,12 @@ def register():
     return render_template('register.html', title='Регистрация', form=form)
 
 
-@app.route('/personal')
-def personal():
-    user = {'name': 'John', 'surname': 'Daw', 'address': '2372 Broadway, New York, NY, USA'}
-    context = {'title': 'Personal', 'user': user}
+@app.route('/personal/<id>')
+def personal(id):
+    user = {'name': 'John', 'surname': 'Daw', 'phone-number': 89273200230,
+            'address': '2372 Broadway, New York, NY, USA'}
+    products = []
+    context = {'title': 'Personal', 'user': user, 'products': products}
     return render_template('personal.html', **context)
 
 

@@ -1,5 +1,10 @@
 .content-wrapper {
     margin: 10% 10%;
+    display: flex;
+}
+
+.name-info {
+    margin-right: 10%;
 }
 
 .name-info h2 {
@@ -8,9 +13,9 @@
     font-size: 40px
 }
 
-.name-info .address input {
-
-
+.name-info input {
+    height: 40px;
+    width: 240px;
 }
 
 .name-info::after {
@@ -18,4 +23,10 @@
     height: 2px;
     background-color: #545454;
     margin: 10px 10px;
+}
+
+.cart-info h2{
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 40px
 }
