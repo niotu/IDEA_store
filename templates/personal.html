@@ -7,8 +7,12 @@
 
     <div class="content-wrapper">
         <div class="name-info">
-            <h2 class="name">{{ user['name'] }} {{ user['surname'] }}</h2>
+            <h2>Personal Data</h2>
             <div class="description">
+                <div class="name">
+                    <h4>Name</h4>
+                    <input type="text" class="name" value="{{ user['name'] }} {{ user['surname'] }}">
+                </div>
                 <div class="address">
                     <h4>Address:</h4>
                     <input type="text" id="address" value="{{ user['address'] }}">
