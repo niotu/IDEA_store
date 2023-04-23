@@ -1,13 +1,18 @@
+import datetime
+
 from flask import Flask, redirect, render_template
-from flask_login import login_user, login_required, logout_user, LoginManager
+from flask_login import login_user, login_required, logout_user, LoginManager, current_user
 
 from data import db_session
-from data.app import get_hot_products, get_prod_by_link, prods, get_user_by_id
+from data.app import get_hot_products, get_prod_by_link, prods
 from data.users import User
 from forms.user_form import LoginForm, RegisterForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(
+    days=365
+)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -68,6 +73,8 @@ def register():
                                    message="User already exists")
         user = User(
             name=form.name.data,
+            surname=form.surname.data,
+            address=form.address.data,
             email=form.email.data
         )
         user.set_password(form.password.data)
@@ -79,7 +86,7 @@ def register():
 
 @app.route('/personal')
 def personal():
-    user = {'name': 'John', 'surname': 'Daw', 'address': '2372 Broadway, New York, NY, USA'}
+    user = {'name': current_user.name, 'surname': current_user.surname, 'address': current_user.address}
     context = {'title': 'Personal', 'user': user}
     return render_template('personal.html', **context)
 
