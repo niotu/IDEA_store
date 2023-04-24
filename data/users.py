@@ -1,4 +1,5 @@
 import datetime
+import sqlite3
 
 import sqlalchemy
 from flask_login import UserMixin
@@ -20,9 +21,26 @@ class User(SqlAlchemyBase, UserMixin):
     created_date = sqlalchemy.Column(sqlalchemy.DateTime,
                                      default=datetime.datetime.now)
     address = sqlalchemy.Column(sqlalchemy.String)
+    cart = sqlalchemy.Column(sqlalchemy.String)
 
     def set_password(self, password):
         self.hashed_password = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.hashed_password, password)
+
+    def save_cart(self):
+        con = sqlite3.connect(f"db/database.db")
+        cur = con.cursor()
+        cur.execute(f"""UPDATE users SET cart = '{self.cart}'
+                                        WHERE email LIKE '{self.email}'""").fetchall()
+        con.commit()
+        con.close()
+
+    def clear_cart(self):
+        con = sqlite3.connect(f"db/database.db")
+        cur = con.cursor()
+        cur.execute(f"""UPDATE users SET cart = ';'
+                                                WHERE email LIKE '{self.email}'""").fetchall()
+        con.commit()
+        con.close()

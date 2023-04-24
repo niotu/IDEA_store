@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-
 {% extends "base.html" %}
 
 {% block content %}
+
     <link rel="stylesheet" href="../static/css/product.css">
     <div class="content-wrapper">
         <a href="#other" class="image-container">
@@ -13,13 +13,25 @@
             <h2>{{ item.price }} $ </h2>
             <h4>Quantity</h4>
             <div class="amount-input">
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
-                <input class="quantity" min="1" max="50" name="quantity" value="1" type="number" disabled="disabled" readonly>
-                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+                <button onclick="Decrease()">-</button>
+                <input class="quantity" min="1" max="50" name="quantity" value='{{ amount.amount }}' type="number" disabled="disabled" readonly>
+                <button onclick="Increase()">+</button>
+
+                <script>
+                function Decrease() {
+                  amount.decrease();
+                }
+                </script>
+                <script>
+                function Increase() {
+                  amount.increase();
+                }
+                </script>
+
             </div>
             <p>{{ item.description }}</p>
             <button class="btn">
-                Add to cart
+                <a href="{{ 'add_to_cart/' + item.link + ';' + amount.amount }}">Add to cart</a>
             </button>
         </div>
     </div>
