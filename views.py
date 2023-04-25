@@ -114,11 +114,12 @@ def personal():
                     "item": item,
                     "amount": amount
                 }
-                if items in cart:
-                    for lst in cart:
-                        if lst == items:
-                            lst["amount"] = str(int(lst["amount"]) + 1)
-                else:
+                flag = False
+                for lst in cart:
+                    if lst["item"] == item:
+                        flag = True
+                        lst["amount"] = str(int(lst["amount"]) + 1)
+                if not flag:
                     cart.append(items)
     user = {'name': current_user.name, 'surname': current_user.surname, 'address': current_user.address,
             'cart': cart, "total": str(total)}
