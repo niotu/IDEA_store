@@ -40,7 +40,7 @@
                         <li class="product-wrapper">
                             <a href="{{ 'store/' + item['item'].link }}">
                                 <div class="product-card">
-                                    <img src={{ item["item"].image }}  width=300
+                                    <img src={{ item["item"].image }}  width="300"
                                          height=300  alt="image">
                                     <p>{{ item['item'].name }} </p>
                                     <h4>{{ ' x ' + item['amount'] }} </h4>
@@ -49,6 +49,8 @@
                             </a>
                         </li>
                     {% endfor %}
+                </ul>
+                <div class="total">
                     <h4> _____________ </h4>
                     <h3> TOTAL </h3>
                     <h2> {{ user['total'] }} $ </h2>
@@ -57,7 +59,7 @@
                             clear cart
                         </button>
                     </a>
-                </ul>
+                </div>
             </div>
         </div>
     </div>
