@@ -47,15 +47,18 @@ def product(link):
 
 @app.route('/store/add_to_cart/<link>')
 def add_to_cart(link):
-    link, amo = link.split(';')
-    amo = int(amo)
-    item = get_prod_by_link(link)
-    if item.amount >= amo:
-        item.amount -= amo
-        item.save_amount()
-        current_user.cart += f"{item.link}:{amo};"
-        current_user.save_cart()
-    return redirect(f'/store/{item.link}')
+    try:
+        link, amo = link.split(';')
+        amo = int(amo)
+        item = get_prod_by_link(link)
+        if item.amount >= amo:
+            item.amount -= amo
+            item.save_amount()
+            current_user.cart += f"{item.link}:{amo};"
+            current_user.save_cart()
+        return redirect(f'/store/{item.link}')
+    except AttributeError:
+        return redirect('/login')
 
 
 @app.route('/login', methods=['GET', 'POST'])
