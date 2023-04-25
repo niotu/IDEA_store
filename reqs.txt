@@ -11,4 +11,4 @@ wheel==0.38.4
 flask_login
 flask_wth
 wtforms
-sqlalchemy
+flask-sqlalchemy
