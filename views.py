@@ -153,4 +153,4 @@ def load_user(user_id):
 
 def main():
     db_session.global_init("db/database.db")
-    app.run(debug=True)
+    app.run(host="192.168.3.93", port=5000, debug=True)
