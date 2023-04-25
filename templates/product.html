@@ -12,9 +12,8 @@
             <h1>{{ item.name }}</h1>
             <h2>{{ item.price }} $ </h2>
             <p>{{ item.description }}</p>
-            <button class="btn">
-                <a href="{{ 'add_to_cart/' + item.link + ';' + amount.amount }}">Add to cart</a>
-            </button>
+
+            <a href="{{ 'add_to_cart/' + item.link + ';' + amount.amount }}"><button class="btn">Add to cart</button></a>
         </div>
     </div>
     <div class="other-details" id="other">
