@@ -11,24 +11,6 @@
         <div class="info">
             <h1>{{ item.name }}</h1>
             <h2>{{ item.price }} $ </h2>
-            <h4>Quantity</h4>
-            <div class="amount-input">
-                <button onclick="Decrease()">-</button>
-                <input class="quantity" min="1" max="50" name="quantity" value='{{ amount.amount }}' type="number" disabled="disabled" readonly>
-                <button onclick="Increase()">+</button>
-
-                <script>
-                function Decrease() {
-                  amount.decrease();
-                }
-                </script>
-                <script>
-                function Increase() {
-                  amount.increase();
-                }
-                </script>
-
-            </div>
             <p>{{ item.description }}</p>
             <button class="btn">
                 <a href="{{ 'add_to_cart/' + item.link + ';' + amount.amount }}">Add to cart</a>

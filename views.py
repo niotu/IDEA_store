@@ -110,10 +110,16 @@ def personal():
                 link, amount = i.split(":")
                 item = get_prod_by_link(link)
                 total += item.price * int(amount)
-                cart.append({
+                items = {
                     "item": item,
                     "amount": amount
-                })
+                }
+                if items in cart:
+                    for lst in cart:
+                        if lst == items:
+                            lst["amount"] = str(int(lst["amount"]) + 1)
+                else:
+                    cart.append(items)
     user = {'name': current_user.name, 'surname': current_user.surname, 'address': current_user.address,
             'cart': cart, "total": str(total)}
     context = {'title': 'Personal', 'user': user}
