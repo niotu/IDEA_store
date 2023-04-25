@@ -1,13 +1,19 @@
+import datetime
+
 from flask import Flask, redirect, render_template
-from flask_login import login_user, login_required, logout_user, LoginManager
+from flask_login import login_user, login_required, logout_user, LoginManager, current_user
 
 from data import db_session
-from data.app import get_hot_products, get_prod_by_link, prods, get_user_by_id
+from data.app import get_hot_products, get_prod_by_link, prods
 from data.users import User
+from data.amount import Amount
 from forms.user_form import LoginForm, RegisterForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(
+    days=365
+)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -34,8 +40,22 @@ def product(link):
     item = get_prod_by_link(link)
     title = item.get_title()
     images = item.get_other_images()
-    context = {"title": title, 'item': item, 'images': images}
+    amount = Amount()
+    context = {"title": title, 'item': item, 'images': images, 'amount': amount}
     return render_template('product.html', **context)
+
+
+@app.route('/store/add_to_cart/<link>')
+def add_to_cart(link):
+    link, amo = link.split(';')
+    amo = int(amo)
+    item = get_prod_by_link(link)
+    if item.amount >= amo:
+        item.amount -= amo
+        item.save_amount()
+        current_user.cart += f"{item.link}:{amo};"
+        current_user.save_cart()
+    return redirect(f'/store/{item.link}')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -68,6 +88,8 @@ def register():
                                    message="User already exists")
         user = User(
             name=form.name.data,
+            surname=form.surname.data,
+            address=form.address.data,
             email=form.email.data
         )
         user.set_password(form.password.data)
@@ -79,9 +101,37 @@ def register():
 
 @app.route('/personal')
 def personal():
-    user = {'name': 'John', 'surname': 'Daw', 'address': '2372 Broadway, New York, NY, USA'}
+    c = current_user.cart.split(';')
+    cart = []
+    total = 0
+    if c:
+        for i in c:
+            if i != '':
+                link, amount = i.split(":")
+                item = get_prod_by_link(link)
+                total += item.price * int(amount)
+                items = {
+                    "item": item,
+                    "amount": amount
+                }
+                flag = False
+                for lst in cart:
+                    if lst["item"] == item:
+                        flag = True
+                        lst["amount"] = str(int(lst["amount"]) + 1)
+                if not flag:
+                    cart.append(items)
+    user = {'name': current_user.name, 'surname': current_user.surname, 'address': current_user.address,
+            'cart': cart, "total": str(total)}
     context = {'title': 'Personal', 'user': user}
     return render_template('personal.html', **context)
+
+
+@app.route('/clear_cart')
+@login_required
+def clear_user_cart():
+    current_user.clear_cart()
+    return redirect("/personal")
 
 
 @app.route('/logout')
@@ -89,6 +139,7 @@ def personal():
 def logout():
     logout_user()
     return redirect("/")
+
 
 
 @login_manager.user_loader

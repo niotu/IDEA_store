@@ -9,12 +9,13 @@
         <div class="name-info">
             <h2>Personal Data</h2>
             <div class="description">
+
                 <div class="name">
                     <h4>Name</h4>
                     <input type="text" class="name" value="{{ user['name'] }} {{ user['surname'] }}">
                 </div>
                 <div class="address">
-                    <h4>Address:</h4>
+                    <h4>Address</h4>
                     <input type="text" id="address" value="{{ user['address'] }}">
                 </div>
                 <div class="payment">
@@ -24,10 +25,37 @@
                         <option value="Crypto">Crypto</option>
                     </select>
                 </div>
+                <a href="/logout">
+                    logout
+                </a>
             </div>
         </div>
         <div class="cart-info">
             <h2 class="cart">Your cart</h2>
+            <div class="cart-products">
+                <ul class="products clearfix">
+                {% for item in user['cart'] %}
+                    <li class="product-wrapper">
+                        <a href="{{ 'store/' + item['item'].link }}">
+                            <div class="product-card">
+                                <img src={{ item["item"].image }}  width="{{ 620 if loop.index % 4 == 0 else 300 }}"
+                                     height={{ 663 if loop.index % 4 == 0 else 300 }}  alt="image">
+                                <p>{{ item['item'].name }} </p>
+                                <h5>{{ ' x ' + item['amount'] }} </h5>
+
+                                <h4>{{ item['item'].price }} $ </h4>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+                <h4> _____________ </h4>
+                <h3> TOTAL </h3>
+                <h2> {{ user['total'] }} $ </h2>
+                <a href="/clear_cart">
+                clear cart
+                </a>
+            </ul>
+            </div>
         </div>
     </div>
 {% endblock %}

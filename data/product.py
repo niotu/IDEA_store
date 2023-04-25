@@ -1,4 +1,5 @@
 import random
+import sqlite3
 
 from data.CONSTANTS import PREFIX
 
@@ -23,6 +24,14 @@ class Product:
     def get_other_images(self):
         random.shuffle(self.other_photos)
         return self.other_photos
+
+    def save_amount(self):
+        con = sqlite3.connect(f"db/database.db")
+        cur = con.cursor()
+        cur.execute(f"""UPDATE products SET amount = '{self.amount}'
+                                WHERE name LIKE '{self.name}'""").fetchall()
+        con.commit()
+        con.close()
 
 
 '''вот такой должен быть аутпут из бд'''
